@@ -12,10 +12,13 @@ module LotteryOutput
 
     # Construct and set numbers attrib
     def initialize
+      # create array of shuffled available numbers
+      range = Array(RANGE).shuffle
+      # emtpy array of numbers
       @numbers = []
-      6.times do
-        @numbers << generate_number
-      end
+      # Alternative: @numbers << generate_number
+      # Pop out of array from range
+      6.times { @numbers << range.pop }
     end
 
     def nice_format
