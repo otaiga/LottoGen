@@ -1,8 +1,12 @@
 require 'sinatra'
-require './lib/lottery_output/lottery_gen'
+require './lib/lottery_gen'
 
-include LotteryOutput
+helpers do
+  def lotto_gen
+    @lotto_gen ||= LotteryGen.new
+  end
+end
 
 get '/' do
-  lottery_gen.nice_format
+  lotto_gen.numbers.to_s
 end
