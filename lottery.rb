@@ -26,7 +26,8 @@ module LotteryOutput
     end
 
     def default_message
-      "Hi this is a simple lottery generator. \nPlease type 'help' after command for more options"
+      "Hi this is a simple lottery generator. \n" \
+      "Please type 'help' after command for more options"
     end
 
     private
@@ -43,7 +44,7 @@ module LotteryOutput
 
   def default_output
     puts lottery_gen.default_message
-    puts "Your Numbers:"
+    puts 'Your Numbers:'
     puts lottery_gen.numbers
   end
 
