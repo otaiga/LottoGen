@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'json'
 require './lib/lottery_gen'
 
 helpers do
@@ -8,5 +9,12 @@ helpers do
 end
 
 get '/' do
-  lotto_gen.numbers.to_s
+  erb :index
+end
+
+get '/lotto.json' do
+  content_type :json
+  {
+    numbers: lotto_gen.numbers
+  }.to_json
 end

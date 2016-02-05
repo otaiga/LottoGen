@@ -3,5 +3,5 @@ Real quick and simple lottery generator.
 
   - `bundle`
 
-Command line: `./bin/lotto_gen help`
-Web: `rackup`
+  - Command line: `./bin/lotto_gen help`
+  - Web: `rackup`
